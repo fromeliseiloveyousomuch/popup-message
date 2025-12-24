@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pop-up Messages</title>
+<style>
+  body {
+    background-color: black;
+    color: pink;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="icon">💖</div>
+<script>
+  const messages = [
+    "Hello, mister Wook.",
+    "This is Santa, and someone told me you have been both good... and naughty.",
+    "Is that true?",
+    "She wants to tell you a secret.",
+    "You own her heart.",
+    "And she wants you to know you are making her life complete.",
+    "I love you, dearly, and endlessly.",
+    "Your one and only, Elisè.",
+    "And... I hope you don't mind the pink theme. It is my first time coding~"
+  ];
+
+  function showMessages(index = 0) {
+    if(index < messages.length) {
+      alert(messages[index]);
+      showMessages(index + 1);
+    }
+  }
+
+  showMessages();
+</script>
+</body>
+</html>
